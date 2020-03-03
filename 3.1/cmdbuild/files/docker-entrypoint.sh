@@ -19,7 +19,8 @@ done
 
 echo "Init DB"
 { # try
-    if [ $CMDBUILD_DUMP != "ignore" ] then
+    if [ $CMDBUILD_DUMP != "ignore" ] 
+    then
         $CATALINA_HOME/webapps/cmdbuild/cmdbuild.sh dbconfig create $CMDBUILD_DUMP -configfile $CATALINA_HOME/conf/cmdbuild/database.conf
     else
         echo "DB initialization ignored."
