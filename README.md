@@ -18,29 +18,29 @@ I will update the repository every time there is a new version of cmdbuild avail
 
 *Sometimes container cmdbuild_app after first run may be stopped, because it need more memory for this. Please, restart it*  
 
-**Please open issues on [github](https://github.com/itmicus/cmdbuild_docker/issues)**  
+**Please open issues on [github](https://github.com/gwsch/cmdbuild_docker/issues)**  
 
 ## Deploy by docker run
 
 ### CMDbuild with demo database
 
 ```bash
-docker run --name cmdbuild_db -p 5432:5432 -d itmicus/cmdbuild:db-3.0
-docker run --name cmdbuild_app --restart unless-stopped --link cmdbuild_db  -p 8090:8080 -d itmicus/cmdbuild:app-3.2
+docker run --name cmdbuild_db -p 5432:5432 -d gwsch/cmdbuild:db-3.0
+docker run --name cmdbuild_app --restart unless-stopped --link cmdbuild_db  -p 8090:8080 -d gwsch/cmdbuild:app-3.2
 ```
 
 ### CMDbuild READY2USE 2.0
 
 ```bash
-docker run --name cmdbuild_db -p 5432:5432 -d itmicus/cmdbuild:db-3.0
-docker run --name cmdbuild_app --restart unless-stopped -e CMDBUILD_DUMP="demo.dump.xz" --link cmdbuild_db  -p 8090:8080 -d itmicus/cmdbuild:r2u-2.0-3.2
+docker run --name cmdbuild_db -p 5432:5432 -d gwsch/cmdbuild:db-3.0
+docker run --name cmdbuild_app --restart unless-stopped -e CMDBUILD_DUMP="demo.dump.xz" --link cmdbuild_db  -p 8090:8080 -d gwsch/cmdbuild:r2u-2.0-3.2
 ```
   
 ### CMDbuild openMAINT 2.0
 
 ```bash
-docker run --name openmaint_db -p 5432:5432 -d itmicus/cmdbuild:db-3.0
-docker run --name openmaint_app --restart unless-stopped -e CMDBUILD_DUMP="demo.dump.xz" --link openmaint_db  -p 8090:8080 -d itmicus/cmdbuild:om-2.0-3.2
+docker run --name openmaint_db -p 5432:5432 -d gwsch/cmdbuild:db-3.0
+docker run --name openmaint_app --restart unless-stopped -e CMDBUILD_DUMP="demo.dump.xz" --link openmaint_db  -p 8090:8080 -d gwsch/cmdbuild:om-2.0-3.2
 ```
 
 ## Deploy by docker-compose
@@ -48,7 +48,7 @@ docker run --name openmaint_app --restart unless-stopped -e CMDBUILD_DUMP="demo.
 ### CMDbuild with demo database
 
 ```bash
-git clone https://github.com/itmicus/cmdbuild_docker
+git clone https://github.com/gwsch/cmdbuild_docker
 ```  
 cd to folder version 3.2 or ready2use 2.0 or openmaint 2.0 and run
 ```bash  
@@ -58,7 +58,7 @@ docker-compose up -d
 ### CMDbuild Ready2use
 
 ```bash  
-git clone https://github.com/itmicus/cmdbuild_docker
+git clone https://github.com/gwsch/cmdbuild_docker
 ```  
 Open file docker-compose.yml and change to CMDBUILD_DUMP=demo.dump.xz and save file
 ```bash
@@ -68,7 +68,7 @@ docker-compose up -d
 ### CMDbuild openMAINT 2.0
 
 ```bash  
-git clone https://github.com/itmicus/cmdbuild_docker
+git clone https://github.com/gwsch/cmdbuild_docker
 ```  
 Open file docker-compose.yml and change to CMDBUILD_DUMP=demo.dump.xz and save file
 ```bash
@@ -104,6 +104,7 @@ CMDBUILD_DUMP: demo
 
 * demo.dump.xz
 * empty.dump.xz
+* ignore
 
 ### CMDBUILD users
 

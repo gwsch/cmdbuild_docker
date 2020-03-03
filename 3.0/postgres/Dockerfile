@@ -1,6 +1,6 @@
 FROM postgres:10.7
 
-MAINTAINER LLC Itmicus <order@itmicus.ru>
+LABEL maintainer="g.w.schmidt@hrinkon.ch"
 
 ENV POSTGIS_MAJOR 2.5
 ENV POSTGRES_USER postgres

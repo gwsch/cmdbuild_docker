@@ -1,6 +1,6 @@
 FROM tomcat:9.0.31-jdk11-openjdk
 
-MAINTAINER LLC Itmicus <order@itmicus.ru>
+LABEL maintainer="g.w.schmidt@hrinkon.ch"
 
 WORKDIR $CATALINA_HOME
 
