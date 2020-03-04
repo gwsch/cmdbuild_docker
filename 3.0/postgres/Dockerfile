@@ -1,6 +1,6 @@
 FROM postgres:10.7
 
-LABEL maintainer="g.w.schmidt@hrinkon.ch"
+LABEL maintainer="g.w.schmidt@rinkon.ch"
 
 ENV POSTGIS_MAJOR 2.5
 ENV POSTGRES_USER postgres

@@ -1,6 +1,6 @@
 FROM tomcat:8.5.42-jdk8-openjdk
 
-LABEL maintainer="g.w.schmidt@hrinkon.ch"
+LABEL maintainer="g.w.schmidt@rinkon.ch"
 
 WORKDIR $CATALINA_HOME
 
